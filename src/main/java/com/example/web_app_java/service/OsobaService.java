@@ -1,10 +1,15 @@
 package com.example.web_app_java.service;
 import com.example.web_app_java.dao.OsobaDao;
 import com.example.web_app_java.model.Osoba;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
 
+@Service
 public class OsobaService {
     // konstruktor od OsobaDao
-    public OsobaService(OsobaDao osobaDao) {
+    @Autowired
+    public OsobaService(@Qualifier("fakeDao") OsobaDao osobaDao) {
         this.osobaDao = osobaDao;
     }
     private final OsobaDao osobaDao;
