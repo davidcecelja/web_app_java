@@ -5,6 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class OsobaService {
     // konstruktor od OsobaDao
@@ -15,5 +17,9 @@ public class OsobaService {
     private final OsobaDao osobaDao;
     public int addOsoba(Osoba osoba){
         return osobaDao.insertOsoba(osoba);
+    }
+
+    public List<Osoba> getAllPeople(){
+        return osobaDao.selectAllPeople();
     }
 }

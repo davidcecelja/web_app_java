@@ -1,5 +1,7 @@
 package com.example.web_app_java.dao;
 import com.example.web_app_java.model.Osoba;
+
+import java.util.List;
 import java.util.UUID;
 
 public interface OsobaDao {
@@ -10,5 +12,5 @@ public interface OsobaDao {
         UUID id = UUID.randomUUID();
         return insertOsoba(id, osoba);
     }
-
+    List<Osoba> selectAllPeople();
 }
