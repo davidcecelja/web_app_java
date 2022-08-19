@@ -11,7 +11,7 @@ import java.util.UUID;
 @Service
 public class OsobaService {
     @Autowired
-    public OsobaService(@Qualifier("fakeDao") OsobaDao osobaDao) {
+    public OsobaService(@Qualifier("postgres") OsobaDao osobaDao) {
         this.osobaDao = osobaDao;
     }
 

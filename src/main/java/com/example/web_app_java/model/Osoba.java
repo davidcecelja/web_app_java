@@ -4,6 +4,7 @@ import java.util.UUID;
 
 public class Osoba {
     private final UUID id;
+    @NotBlank
     private final String ime;
 
     public Osoba(@JsonProperty("id") UUID id, @JsonProperty("ime") String ime) {
