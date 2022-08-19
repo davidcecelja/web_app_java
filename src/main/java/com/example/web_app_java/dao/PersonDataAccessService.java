@@ -1,7 +1,6 @@
 package com.example.web_app_java.dao;
 import com.example.web_app_java.model.Osoba;
 import org.springframework.stereotype.Repository;
-
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
